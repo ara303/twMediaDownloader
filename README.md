@@ -3,7 +3,7 @@
 > [!WARNING]  
 > This fork patches the extension after X/Twitter changed URLs site-wide from `twitter.com` to `x.com` on 16th May, 2024. Otherwise this extension was abandoned by its original author. Much of its functionality for bulk downloading media has been broken since X/Twitter turned off its public API in 2023.
 
-I went through the files as I had to change all references to `twitter.com` to `x.com`. It seems X/Twitter even moved over all API calls to `api.x.com`, etc. That surely won't present problems.
+I went through the files to replace all references to `twitter.com` with `x.com`. It seems X/Twitter even moved over all API calls to `api.x.com`, etc. That surely won't present problems.
 
 Functionality which relied on the public API that was previously broken continues to be broken. The extension does dump various errors to the console as a result of trying to access endpoints since shutdown.
 
