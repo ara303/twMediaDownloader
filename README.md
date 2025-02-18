@@ -1,15 +1,19 @@
 # Important information about this fork
 
 > [!WARNING]  
-> This fork patches the extension after X/Twitter changed URLs site-wide from `twitter.com` to `x.com` on 16th May, 2024. Otherwise this extension was abandoned by its original author. Much of its functionality for bulk downloading media has been broken since X/Twitter turned off its public API in 2023.
+> [This fork](https://github.com/ara303/twMediaDownloader) attempts to patch the extension after X/Twitter changed all URLs site-wide from `twitter.com` to `x.com` on 16th May, 2024. Functionality relying on the free API was broken when X/Twitter shut that down in 2023, and this remains the case.
 
-I went through the files to replace all references to `twitter.com` with `x.com`. It seems X/Twitter even moved over all API calls to `api.x.com`, etc. That surely won't present problems.
+An automatic find-and-replace, substituting all references of `twitter.com` for `x.com`. When the primary domain name was changed to X.com, the API was also moved to `api.x.com` which broke the extension entirely.
 
-Functionality which relied on the public API that was previously broken continues to be broken. The extension does dump various errors to the console as a result of trying to access endpoints since shutdown.
+Functionality which relied on the public API that was previously broken continues to be broken. The extension dumps various errors to the console as a result of trying to access endpoints that were since shut down.
 
 I did this largely for myself as despite being partially broken there was enough working here that I found useful. It is the only extension I've found that provides a one-click way to get a video's URL for sharing purposes, which I personally find easier to share than downloading.
 
-**The readme below is outdated.** The original author removed the extension from the Chrome/Firefox extension sites so the links are dead.
+**The readme below is outdated!** The original author removed the extension from the Chrome/Firefox extension sites so the links are dead.
+
+--------
+
+--------
 
 --------
 
