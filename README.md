@@ -11,6 +11,14 @@ Functionality which relied on the public API that was previously broken continue
 
 I did this largely for myself as despite being partially broken there was enough working here that I found useful. It is the only extension I've found that provides a one-click way to get a video's URL for sharing purposes, which I personally find easier to share than downloading.
 
+--------
+
+> [!TIP]
+> If you need bulk downloading of media, this does not do that (sorry!). Try [twmd](https://github.com/mmpx12/twitter-media-downloader). I've tested this personally and it does work (as of October 2025).
+>
+> Installation's a little fiddly, but I was able to [download a binary](https://github.com/mmpx12/twitter-media-downloader/releases/tag/v1.14.2) (in my case, Ubuntu). Once you have a binary extracted, try running: `twmd -u=jack -L`. It will first return an error that username/password login is no longer supported, but after you should be able to manually provide `auth_token` and `ct0` cookies, via pasting them into the CLI. (In Chrome/Chromium, right click when logged in to Twitter > Inspect > Application > Cookies > https://x.com > copy the values for `auth_token` and `ct0` to get those values.)
+------
+
 **The readme below is outdated!** The original author removed the extension from the Chrome/Firefox extension sites so the links are dead.
 
 --------
