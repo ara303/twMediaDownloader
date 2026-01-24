@@ -3,7 +3,7 @@
 > [!WARNING]  
 > [This fork](https://github.com/ara303/twMediaDownloader) attempts to patch the extension after X/Twitter changed all URLs site-wide from `twitter.com` to `x.com` on 16th May, 2024. Functionality relying on the free and public API was broken when X/Twitter shut that down in 2023, and this remains the case.
 
-[Chrome installation instructions here.](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940). [Firefox build may not work at all.](https://github.com/ara303/twMediaDownloader/issues/1) Sorry about that.
+[Chrome installation instructions here](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940). [Firefox build may not work at all.](https://github.com/ara303/twMediaDownloader/issues/1) Sorry about that.
 
 An automatic find-and-replace, substituting all references of `twitter.com` for `x.com`. When the primary domain name was changed to X.com, the API was also moved to `api.x.com` which broke the extension entirely.
 
