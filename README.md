@@ -1,17 +1,19 @@
 # Important information about this fork
 
 > [!WARNING]  
+> **Not under active development at this time.**
+>
 > [This fork](https://github.com/ara303/twMediaDownloader) attempts to patch the extension after X/Twitter changed all URLs site-wide from `twitter.com` to `x.com` on 16th May, 2024. Functionality relying on the free and public API was broken when X/Twitter shut that down in 2023, and this remains the case.
 
-[Chrome installation instructions here](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940). [Firefox build may not work at all.](https://github.com/ara303/twMediaDownloader/issues/1) Sorry about that.
+[Chrome installation instructions here](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940). [Firefox build may not work at all.](https://github.com/ara303/twMediaDownloader/issues/1)
+
+
 
 An automatic find-and-replace, substituting all references of `twitter.com` for `x.com`. When the primary domain name was changed to X.com, the API was also moved to `api.x.com` which broke the extension entirely.
 
 Functionality which relied on the public API that was previously broken continues to be broken. The extension dumps various errors to the console as a result of trying to access endpoints that were since shut down.
 
 I did this largely for myself as despite being partially broken there was enough working here that I found useful. It is the only extension I've found that provides a one-click way to get a video's URL for sharing purposes, which I personally find easier to share than downloading.
-
---------
 
 > [!TIP]
 > If you need bulk downloading of media, this does not do that (sorry!). Try [twmd](https://github.com/mmpx12/twitter-media-downloader). I've tested this personally and it does work (as of October 2025).
