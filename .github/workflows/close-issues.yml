@@ -23,14 +23,14 @@ jobs:
               issue_number: context.issue.number,
               body: `Hi, @${author}.
               
-              This repository is **not maintained**.
+              This repository is **not maintained**. For details, see [\`README.md\`](https://github.com/ara303/twMediaDownloader?tab=readme-ov-file#important-information-about-this-fork).
 
               Alternatives:
-              - Use [Cobalt.tools](https://cobalt.tools), or [its API](https://github.com/imputnet/cobalt/blob/main/docs/api.md) (personally recommended)
-              - Use [TwitterMediaHarvest](https://github.com/EltonChou/TwitterMediaHarvest) for a one-click solution that's very user-friendly
-              - Use [\`twmd\`](https://github.com/mmpx12/twitter-media-downloader) to scrape and bulk download if you're comfortable with CLI tools
+              - [Cobalt.tools](https://cobalt.tools), which also has [an API](https://github.com/imputnet/cobalt/blob/main/docs/api.md)
+              - [TwitterMediaHarvest](https://github.com/EltonChou/TwitterMediaHarvest) for a user-friendly one click solution 
+              - [\`twmd\`](https://github.com/mmpx12/twitter-media-downloader) for automated scraping/bulk downloading if you're comfortable with the CLI
               
-              If you use an AI/LLM for code you could also try getting help with your issue that way.
+              If you use AI/LLMs for code, you could also prompt for help.
               
               Thank you for contributing.`
             });
