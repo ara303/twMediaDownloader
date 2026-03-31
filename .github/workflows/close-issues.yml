@@ -1,0 +1,44 @@
+name: Auto-close Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto-close-issue:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Comment and close issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.issue.user.login;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Hi, @${author}.
+              
+              This repository is **not maintained**.
+
+              Alternatives:
+              - Use [Cobalt.tools](https://cobalt.tools), or [its API](https://github.com/imputnet/cobalt/blob/main/docs/api.md) (personally recommended)
+              - Use [TwitterMediaHarvest](https://github.com/EltonChou/TwitterMediaHarvest) for a one-click solution that's very user-friendly
+              - Use [`twmd`](https://github.com/mmpx12/twitter-media-downloader) to scrape and bulk download if you're comfortable with CLI tools
+              
+              If you use an AI/LLM for code you could also try getting help with your issue that way.
+              
+              Thank you for contributing.`
+            });
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              state_reason: 'not_planned'
+            });
