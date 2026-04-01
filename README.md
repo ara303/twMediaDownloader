@@ -1,27 +1,26 @@
-# Important information about this fork
+# Important information - please read
 
 > [!WARNING]  
-> **Not under active development at this time.**
->
-> [This fork](https://github.com/ara303/twMediaDownloader) attempts to patch the extension after X/Twitter changed all URLs site-wide from `twitter.com` to `x.com` on 16th May, 2024. Functionality relying on the free and public API was broken when X/Twitter shut that down in 2023, and this remains the case.
+> **Not in active development.**
 
-[Chrome installation instructions here](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940). [Firefox build may not work at all.](https://github.com/ara303/twMediaDownloader/issues/1)
+[Chrome installation instructions.](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940) Firefox support is [likely broken](https://github.com/ara303/twMediaDownloader/issues/1).
 
+When the service formerly known as Twitter changed its primary domain name to X.com, the API was also moved (`api.x.com`) which broke this extension entirely.
 
+This fork attempts to patch the extension to restore the basics that functioned prior to that domain name change. That is all this is.
 
-An automatic find-and-replace, substituting all references of `twitter.com` for `x.com`. When the primary domain name was changed to X.com, the API was also moved to `api.x.com` which broke the extension entirely.
+Features relying on the public API, which was shut down _before_ the domain name change, will not be restored. If you use this, expect your browser's dev console to show errors as functions of the plugin try to contact since-shutdown endpoints. Please don't open issues asking for broken functionality to be restored (but you can open PRs...! 😉).
 
-Functionality which relied on the public API that was previously broken continues to be broken. The extension dumps various errors to the console as a result of trying to access endpoints that were since shut down.
-
-I did this largely for myself as despite being partially broken there was enough working here that I found useful. It is the only extension I've found that provides a one-click way to get a video's URL for sharing purposes, which I personally find easier to share than downloading.
+This is a pet project, made for myself primarily. Despite the partial breakages, there was enough working here I found useful. It was the only extension I found that provided a one-click method to extract the URL of a video hosted on Twitter's servers, which I find much easier to work with and share around.
 
 > [!TIP]
-> If you need bulk downloading of media, this does not do that (sorry!). Try [twmd](https://github.com/mmpx12/twitter-media-downloader). I've tested this personally and it does work (as of October 2025).
+> **Bulk downloading is broken.** If you must bulk download media, instead try [`twmd`](https://github.com/mmpx12/twitter-media-downloader).
 >
-> Installation's a little fiddly, but I was able to [download a binary](https://github.com/mmpx12/twitter-media-downloader/releases/tag/v1.14.2) (in my case, Ubuntu). Once you have a binary extracted, try running: `twmd -u=jack -a -L`. It'll error at first but but you can provide `auth_token` and `ct0` cookie values (in Chrome/etc., right click when logged in, go to > Inspect > Application > Cookies > https://x.com > copy the values for `auth_token` and `ct0` to get those values).
+> Installation is unintuitive but achievable. First, [download your relevant binary](https://github.com/mmpx12/twitter-media-downloader/releases/tag/v1.14.2). Once you've extracted it, try running `twmd -u=<username> -a -L`. It will return an error to you at first, but then let you provide the `auth_token` and `ct0` values it needs to actually work the next time you re-run that command. In Chrome/Chromium, open a new X.com tab where you're logged in and let your timeline finish loading. Then right-click, go to Inspect > Application > Cookies > https://x.com, and copy the values for `auth_token` and `ct0` in here.
+> 
 ------
 
-**The readme below is outdated!** The original author removed the extension from the Chrome/Firefox extension sites so the links are dead.
+**From this point onwards, the readme is outdated!** The original author removed the extension from the Chrome/Firefox extension sites so those links won't work.
 
 --------
 
