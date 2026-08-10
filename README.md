@@ -3,7 +3,7 @@
 > [!WARNING]  
 > **Not in active development.**
 
-[Chrome installation instructions.](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940) Firefox support is [likely broken](https://github.com/ara303/twMediaDownloader/issues/1).
+[Chrome installation instructions.](https://github.com/ara303/twMediaDownloader/issues/3#issuecomment-2119328940) Firefox support is [likely broken](https://github.com/ara303/twMediaDownloader/issues/1), but it [may be possible](https://github.com/ara303/twMediaDownloader/issues/1).
 
 When the service formerly known as Twitter changed its primary domain name to X.com, the API was also moved (`api.x.com`) which broke this extension entirely.
 
